@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.config.settings import settings
+#from app.config.settings import settings
 from app.config.cors import configure_cors
 from app.config.settings import get_settings
 from app.exceptions.handlers import register_exception_handlers

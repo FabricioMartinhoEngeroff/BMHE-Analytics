@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.config.settings import settings
+#from app.config.settings import settings
 from app.config.cors import configure_cors
 from app.config.settings import get_settings
 from app.exceptions.handlers import register_exception_handlers
@@ -8,7 +8,6 @@ from app.security.token_service import TokenService
 from app.repositories.user_repo import UserRepository
 from app.routers import auth_router, user_router
 
-settings = get_settings()
 app = FastAPI(title=settings.APP_NAME)
 
 # CORS e exceções
@@ -20,7 +19,8 @@ token_service = TokenService()
 user_repository = UserRepository()
 app.add_middleware(AuthMiddleware, token_service=token_service, user_repository=user_repository)
 
-print(settings.DATABASE_URL)
+
+settings = get_settings()
 print(settings.DATABASE_URL)
 
 # Rotas
