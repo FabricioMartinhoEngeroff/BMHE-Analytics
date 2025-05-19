@@ -1,0 +1,42 @@
+from pydantic import BaseModel, EmailStr, Field, constr
+from typing import Annotated
+from app.domain.schemas.endereco import Endereco
+
+# DTO de Login
+class LoginRequest(BaseModel):
+    email: Annotated[
+        EmailStr,
+        Field(..., description="Email válido")
+    ]
+    password: Annotated[
+        constr(min_length=8),
+        Field(..., description="Senha com no mínimo 8 caracteres")
+    ]
+
+# DTO de Registro
+class RegisterRequest(BaseModel):
+    name: Annotated[
+        constr(min_length=1),
+        Field(..., description="Nome obrigatório")
+    ]
+    email: Annotated[
+        EmailStr,
+        Field(..., description="Email válido")
+    ]
+    password: Annotated[
+        constr(min_length=8, regex=r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).+$"),
+        Field(..., description="Senha forte: mínimo 8 caracteres, com maiúscula, minúscula, número e símbolo")
+    ]
+    cpf: Annotated[
+        constr(regex=r"^\d{3}\.\d{3}\.\d{3}-\d{2}$"),
+        Field(..., description="CPF no formato xxx.xxx.xxx-xx")
+    ]
+    telefone: Annotated[
+        constr(regex=r"^\(\d{2}\)\s?\d{4,5}-\d{4}$"),
+        Field(..., description="Telefone no formato (xx) xxxxx-xxxx")
+    ]
+    endereco: Endereco
+
+# DTO de Token
+class Token(BaseModel):
+    token: str
