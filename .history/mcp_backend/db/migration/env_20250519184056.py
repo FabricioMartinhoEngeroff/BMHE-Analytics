@@ -15,7 +15,7 @@ load_dotenv()
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
 # Importa o metadata do seu projeto
-from app.domain.models.base import registry
+from mcp_backend.app.domain.models.base import registry
 
 # Alembic configuration
 config = context.config

@@ -1,5 +1,5 @@
-from app.domain.user import User
-from app.exceptions.security_exceptions import ForbiddenException
+from mcp_backend.app.domain.user import User
+from mcp_backend.app.exceptions.security_exceptions import ForbiddenException
 
 class AuthorizationService:
     @staticmethod

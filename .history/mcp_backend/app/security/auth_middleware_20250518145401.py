@@ -2,8 +2,8 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from fastapi import Request
 from fastapi.security.utils import get_authorization_scheme_param
 
-from app.security.token_service import TokenService
-from app.repositories.user_repo import UserRepository
+from mcp_backend.app.security.token_service import TokenService
+from mcp_backend.app.repositories.user_repo import UserRepository
 
 class AuthMiddleware(BaseHTTPMiddleware):
     def __init__(self, app, token_service: TokenService, user_repository: UserRepository):

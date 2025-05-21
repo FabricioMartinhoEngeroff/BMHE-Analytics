@@ -1,10 +1,10 @@
 from pydantic import BaseModel, EmailStr, Field, constr
 from typing import Annotated
-from app.domain.schemas.endereco import Endereco
+from mcp_backend.app.domain.schemas.endereco import Endereco
 
 from typing import Annotated
 from pydantic import BaseModel, Field, constr
-from app.schemas.endereco import Endereco  # ajuste conforme sua estrutura
+from mcp_backend.app.schemas.endereco import Endereco  # ajuste conforme sua estrutura
 
 class UserRequest(BaseModel):
     name: Annotated[

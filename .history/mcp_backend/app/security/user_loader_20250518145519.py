@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
-from app.repositories.user_repo import UserRepository
+from mcp_backend.app.repositories.user_repo import UserRepository
 
 class UserLoader:
     def __init__(self, repository: UserRepository):

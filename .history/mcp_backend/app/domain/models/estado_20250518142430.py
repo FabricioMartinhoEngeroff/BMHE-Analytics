@@ -1,6 +1,6 @@
 from sqlalchemy import String, Enum
 from sqlalchemy.orm import Mapped, mapped_column, mapped_as_dataclass
-from app.domain.models.base import registry
+from mcp_backend.app.domain.models.base import registry
 import enum
 class Estado(str, Enum):
     AC = "AC"

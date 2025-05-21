@@ -1,12 +1,12 @@
 from fastapi import FastAPI
-#from app.config.settings import settings
-from app.config.cors import configure_cors
-from app.config.settings import get_settings
-from app.exceptions.handlers import register_exception_handlers
-from app.security.auth_middleware import AuthMiddleware
-from app.security.token_service import TokenService
-from app.repositories.user_repo import UserRepository
-from app.routers import auth_router, user_router
+#from mcp_backend.app.config.settings import settings
+from mcp_backend.app.config.cors import configure_cors
+from mcp_backend.app.config.settings import get_settings
+from mcp_backend.app.exceptions.handlers import register_exception_handlers
+from mcp_backend.app.security.auth_middleware import AuthMiddleware
+from mcp_backend.app.security.token_service import TokenService
+from mcp_backend.app.repositories.user_repo import UserRepository
+from mcp_backend.app.routers import auth_router, user_router
 
 app = FastAPI(title=settings.APP_NAME)
 

@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
-from app.config.settings import settings
-from app.exceptions.security_exceptions import UnauthorizedException
+from mcp_backend.app.config.settings import settings
+from mcp_backend.app.exceptions.security_exceptions import UnauthorizedException
 
 class TokenService:
     def create_token(self, user_id: str) -> str:

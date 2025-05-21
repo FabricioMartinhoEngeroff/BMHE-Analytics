@@ -1,6 +1,6 @@
 from pydantic import BaseModel, EmailStr, Field, constr
 from typing import Annotated
-from app.domain.schemas.endereco import Endereco
+from mcp_backend.app.domain.schemas.endereco import Endereco
 
 # DTO de Login
 class LoginRequest(BaseModel):

@@ -3,7 +3,7 @@
 import uuid
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
-from app.config.database import Base
+from mcp_backend.app.config.database import Base
 from sqlalchemy.dialects.postgresql import UUID
 
 class Role(Base):

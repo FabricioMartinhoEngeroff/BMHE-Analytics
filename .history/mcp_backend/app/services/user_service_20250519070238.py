@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from domain.models.user import User, Role
 from domain.schemas.user import UserDTO, UserRequest
-from app.repositories.user_repo import UserRepository
+from mcp_backend.app.repositories.user_repo import UserRepository
 from security.token_service import PasswordEncoder
 from services.welcome_service import WelcomeService
 from exceptions.http_exceptions import (

@@ -1,6 +1,6 @@
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.domain.models.role import Role
+from mcp_backend.app.domain.models.role import Role
 
 class RoleRepository:
 

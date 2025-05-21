@@ -1,7 +1,7 @@
 from fastapi import Request
 from fastapi.responses import JSONResponse
-from app.exceptions.resource_exceptions import ResourceNotFoundException, ResourceConflictException
-from app.exceptions.security_exceptions import UnauthorizedException, ForbiddenException
+from mcp_backend.app.exceptions.resource_exceptions import ResourceNotFoundException, ResourceConflictException
+from mcp_backend.app.exceptions.security_exceptions import UnauthorizedException, ForbiddenException
 
 def register_exception_handlers(app):
     @app.exception_handler(ResourceNotFoundException)

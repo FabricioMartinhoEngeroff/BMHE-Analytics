@@ -3,8 +3,8 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship, mapped_as_dataclass
 import uuid
 from datetime import datetime
-from app.domain.models.role import Role
-from app.domain.models.base import registry
+from mcp_backend.app.domain.models.role import Role
+from mcp_backend.app.domain.models.base import registry
 
 # Tabela intermediária users_roles (muitos para muitos)
 users_roles = Table(

@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from app.domain.models.estado import Estado
+from mcp_backend.app.domain.models.estado import Estado
 
 class Endereco(BaseModel):
     rua: str = Field(..., min_length=1)

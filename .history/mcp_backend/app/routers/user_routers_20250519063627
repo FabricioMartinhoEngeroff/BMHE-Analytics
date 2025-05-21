@@ -2,13 +2,13 @@ from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from uuid import UUID
 
-from app.configs.database import get_db
-from app.domain.schemas.user import UserRequest, UserDTO
-from app.services.user_service import UserService
-from app.services.welcome_service import WelcomeService
-from app.repositories.user_repo import UserRepository
-from app.security.token_service import PasswordEncoder
-from app.services.welcome_service import WhatsAppService
+from mcp_backend.app.configs.database import get_db
+from mcp_backend.app.domain.schemas.user import UserRequest, UserDTO
+from mcp_backend.app.services.user_service import UserService
+from mcp_backend.app.services.welcome_service import WelcomeService
+from mcp_backend.app.repositories.user_repo import UserRepository
+from mcp_backend.app.security.token_service import PasswordEncoder
+from mcp_backend.app.services.welcome_service import WhatsAppService
 
 router = APIRouter(prefix="/user", tags=["Usuários"])
 

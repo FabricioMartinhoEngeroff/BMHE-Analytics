@@ -14,7 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'a
 
 
 # Importa o metadata central (via registry)
-from app.config.database import registry 
+from mcp_backend.app.config.database import registry 
 
 # Configura o objeto Alembic
 config = context.config

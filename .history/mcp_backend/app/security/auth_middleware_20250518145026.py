@@ -1,9 +1,9 @@
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
-from app.security.token_service import TokenService
-from app.repositories.user_repo import UserRepository
-from app.exceptions.security_exceptions import UnauthorizedException
+from mcp_backend.app.security.token_service import TokenService
+from mcp_backend.app.repositories.user_repo import UserRepository
+from mcp_backend.app.exceptions.security_exceptions import UnauthorizedException
 
 class AuthMiddleware(BaseHTTPMiddleware):
     def __init__(self, app, token_service: TokenService, user_repository: UserRepository):

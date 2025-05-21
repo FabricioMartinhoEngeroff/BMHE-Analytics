@@ -2,7 +2,7 @@ from sqlalchemy import String
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, mapped_as_dataclass
 import uuid
-from app.domain.models.base import registry  # Registro ORM compartilhado
+from mcp_backend.app.domain.models.base import registry  # Registro ORM compartilhado
 
 @mapped_as_dataclass()
 class Role:

@@ -1,7 +1,7 @@
 from sqlalchemy.orm import mapped_as_dataclass, Mapped, mapped_column
 from sqlalchemy import String, Enum as SqlEnum
-from app.domain.models.base import registry
-from app.domain.models.estado import Estado
+from mcp_backend.app.domain.models.base import registry
+from mcp_backend.app.domain.models.estado import Estado
 
 @mapped_as_dataclass()
 class Endereco:

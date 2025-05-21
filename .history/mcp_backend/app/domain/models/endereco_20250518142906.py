@@ -1,6 +1,6 @@
 from sqlalchemy.orm import mapped_as_dataclass, Mapped, mapped_column
 from sqlalchemy import String
-from app.domain.models.base import registry  # onde está o registry central
+from mcp_backend.app.domain.models.base import registry  # onde está o registry central
 
 @mapped_as_dataclass()
 class Endereco:

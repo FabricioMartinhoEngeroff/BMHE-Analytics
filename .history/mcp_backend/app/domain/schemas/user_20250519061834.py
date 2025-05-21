@@ -1,7 +1,7 @@
 from typing import List, Optional
 from uuid import UUID
 from pydantic import BaseModel, Field, constr
-from app.domain.schemas.endereco import Endereco
+from mcp_backend.app.domain.schemas.endereco import Endereco
 
 # DTO de criação com validações
 class UserRequest(BaseModel):

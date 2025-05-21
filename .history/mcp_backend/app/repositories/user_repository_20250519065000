@@ -1,7 +1,7 @@
 from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from app.domain.models.user import User
+from mcp_backend.app.domain.models.user import User
 
 class UserRepository:
 
