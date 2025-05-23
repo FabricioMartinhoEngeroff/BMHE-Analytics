@@ -3,6 +3,8 @@ from sqlalchemy.orm import Mapped, mapped_column, mapped_as_dataclass
 from mcp_backend.app.domain.models.base import registry
 import enum
 import unicodedata
+from dataclasses import dataclass
+@dataclass
 class Estado(str, Enum):
     AC = "AC"
     AL = "AL"
