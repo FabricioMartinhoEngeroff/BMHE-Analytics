@@ -7,7 +7,7 @@ from fastapi import HTTPException, status
 
 from mcp_backend.app.security.token_service import TokenService
 from mcp_backend.app.repositories.user_repo   import UserRepository
-from mcp_backend.app.config.database import get_db
+from app.config.database import get_db 
 
 class AuthMiddleware(BaseHTTPMiddleware):
     def __init__(

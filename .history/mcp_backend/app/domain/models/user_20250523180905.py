@@ -1,3 +1,4 @@
+# mcp_backend/app/domain/models/user.py
 import uuid
 from datetime import datetime
 from sqlalchemy import String, func, Table, Column, ForeignKey
