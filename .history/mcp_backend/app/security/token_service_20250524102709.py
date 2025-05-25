@@ -16,6 +16,7 @@ class TokenService:
         settings = get_settings()
         self.secret = settings.SECRET_KEY
         self.algorithm = settings.ALGORITHM
+        # armazenamos em minutos no settings, mas podemos converter de horas se preferir
         self.expire_minutes = settings.ACCESS_TOKEN_EXPIRE_MINUTES
 
     def generate_token(self, user_id: UUID) -> str:

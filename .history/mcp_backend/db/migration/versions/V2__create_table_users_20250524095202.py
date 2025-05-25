@@ -1,3 +1,10 @@
+"""create table users
+
+Revision ID: V2
+Revises: V1
+Create Date: 2025-05-24 00:10:00.000000
+
+"""
 from alembic import op
 import sqlalchemy as sa
 from sqlalchemy.dialects.postgresql import UUID

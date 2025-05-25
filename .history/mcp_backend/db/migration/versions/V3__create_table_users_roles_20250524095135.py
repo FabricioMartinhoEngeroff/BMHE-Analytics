@@ -1,3 +1,8 @@
+Revision ID: V3
+Revises: V2
+Create Date: 2025-05-24 00:20:00.000000
+
+"""
 from alembic import op
 import sqlalchemy as sa
 from sqlalchemy.dialects.postgresql import UUID

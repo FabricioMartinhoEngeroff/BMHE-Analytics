@@ -33,7 +33,7 @@ app.add_middleware(
 register_exception_handlers(app)
 
 # — Middleware de autenticação —
-token_service = TokenService()  
+token_service = TokenService()  # agora sem parâmetros
 user_repo = UserRepository()
 app.add_middleware(
     AuthMiddleware,
